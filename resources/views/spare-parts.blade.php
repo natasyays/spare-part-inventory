@@ -19,6 +19,90 @@
     .status-critical { color: #dc3545 !important; background-color: transparent !important; }
     #partsTable td, #partsTable th { vertical-align: middle; text-align: center; }
     .select2-container .select2-selection--single { height: 38px; padding: 5px 10px; }
+
+    
+    body {
+        background-color: #f8f9fc; 
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        color: #333;
+    }
+
+    h3 {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .card {
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        background: #fff;
+    }
+
+    .btn-primary {
+        background: linear-gradient(90deg, #3b82f6, #2563eb);
+        border: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(90deg, #2563eb, #1d4ed8);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(37,99,235,0.3);
+    }
+
+    .table {
+        border-radius: 10px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+
+    .table thead {
+        background-color: #f1f5fb;
+        color: #1e293b;
+        font-weight: 600;
+    }
+
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: #f9fafb;
+    }
+
+    #loading .spinner-border {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .modal-header {
+        background: #f1f5fb;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .modal-title {
+        font-weight: 600;
+        color: #1e293b;
+    }
+
+    /* Input focus highlight */
+    input.form-control:focus, select.form-select:focus, textarea.form-control:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 0.15rem rgba(59,130,246,0.25);
+    }
+
+    /* Toastr styling tweak for modern feel */
+    #toast-container > .toast {
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
     </style>
 </head>
 
