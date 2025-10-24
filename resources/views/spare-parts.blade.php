@@ -75,7 +75,7 @@
         height: 2.5rem;
     }
 
-    /* Modal */
+    /* modal */
     .modal-content {
         border: none;
         border-radius: 1rem;
@@ -92,13 +92,13 @@
         color: #1e293b;
     }
 
-    /* Input focus highlight */
+    /* input focus highlight */
     input.form-control:focus, select.form-select:focus, textarea.form-control:focus {
         border-color: #3b82f6;
         box-shadow: 0 0 0 0.15rem rgba(59,130,246,0.25);
     }
 
-    /* Toastr styling tweak for modern feel */
+    /* toastr styling tweak for modern feel */
     #toast-container > .toast {
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -107,33 +107,45 @@
 </head>
 
 <body class="p-4">
-    <h3 class="mb-3">Spare Parts List Inventory</h3>
+    <div class="card p-4 shadow-sm border-0 mb-4" style="border-radius: 16px; background-color: #fff;">
+    <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+        <h4 class="fw-semibold mb-3 mb-md-0" style="color: #2C3E50; letter-spacing: 0.3px;">
+            Spare Parts List Inventory
+        </h4>
+        <button class="btn btn-primary px-4 py-2" 
+            style="
+                background: linear-gradient(135deg, #4e9af1, #357ae8);
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(78,154,241,0.3);
+                transition: all 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(78,154,241,0.45)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(78,154,241,0.3)'"
+            data-bs-toggle="modal" 
+            data-bs-target="#usageModal">
+            Record Spare Part Usage
+        </button>
+    </div>
 
-    <!-- modal -->
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#usageModal">
-    Record Spare Part Usage
-    </button>
-
-    <!-- input search n filter field -->
-    <div class="card p-3 mb-3">
-        <div class="row g-2">
+    <div class="row g-3">
         <div class="col-md-4">
-            <input type="text" id="searchText" class="form-control" placeholder="Search Part Name / Code">
+            <input type="text" id="searchText" class="form-control form-control-lg" placeholder="Search Part Name / Code" style="border-radius: 10px;">
         </div>
         <div class="col-md-3">
-            <select id="categoryFilter" class="form-select">
-            <option value="">All Categories</option>
+            <select id="categoryFilter" class="form-select form-select-lg" style="border-radius: 10px;">
+                <option value="">All Categories</option>
             </select>
         </div>
         <div class="col-md-3">
-            <select id="statusFilter" class="form-select">
-            <option value="">All Status</option>
-            <option value="safe">Safe</option>
-            <option value="critical">Critical</option>
+            <select id="statusFilter" class="form-select form-select-lg" style="border-radius: 10px;">
+                <option value="">All Status</option>
+                <option value="safe">Safe</option>
+                <option value="critical">Critical</option>
             </select>
-        </div>
         </div>
     </div>
+</div>
 
     <div id="loading" class="text-center my-3">
         <div class="spinner-border text-primary"></div>
